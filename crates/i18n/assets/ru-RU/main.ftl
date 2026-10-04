@@ -146,6 +146,7 @@ error-no-sender = Нет отправителя
 error-empty-ccc-session = Пустая сессия CCC
 error-no-om-session = В ответе нет сессии, возможно, на VPN-сервере закончились лицензии OM
 error-identity-timeout = Таймаут при ожидании ответа идентификации, правильный ли тип входа?
+error-hello-reply-timeout = Истекло время ожидания ответа сервера на приветствие туннеля
 error-invalid-transport-type = Неверный тип транспорта
 error-invalid-ike-version = Неверная версия IKE
 error-invalid-tls-version-max = Неверная максимальная версия TLS

@@ -146,6 +146,7 @@ error-no-sender = Nema pošiljatelja
 error-empty-ccc-session = Prazna CCC sesija
 error-no-om-session = Nema sesije u odgovoru, VPN poslužitelju možda ponestaje OM licenci
 error-identity-timeout = Istek vremena čekanja na odgovor identiteta, je li tip prijave ispravan?
+error-hello-reply-timeout = Isteklo je vrijeme čekanja na hello odgovor tunela od poslužitelja
 error-invalid-transport-type = Nevažeća vrsta prijenosa
 error-invalid-ike-version = Nevažeća verzija IKE-a
 error-invalid-tls-version-max = Nevažeća maksimalna TLS verzija

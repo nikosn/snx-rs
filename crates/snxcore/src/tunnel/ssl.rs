@@ -46,6 +46,7 @@ pub mod keepalive;
 
 const REAUTH_LEEWAY: Duration = Duration::from_secs(60);
 const SEND_TIMEOUT: Duration = Duration::from_secs(120);
+const HELLO_REPLY_TIMEOUT: Duration = Duration::from_secs(30);
 const CHANNEL_SIZE: usize = 1024;
 
 pub type PacketSender = Sender<SlimPacketType>;
@@ -75,6 +76,13 @@ where
     tokio::spawn(channel);
 
     (tx_out, rx_in)
+}
+
+async fn receive_hello_reply(receiver: &mut PacketReceiver) -> anyhow::Result<SlimPacketType> {
+    tokio::time::timeout(HELLO_REPLY_TIMEOUT, receiver.next())
+        .await
+        .map_err(|_| anyhow!(tr!("error-hello-reply-timeout")))?
+        .context("Channel closed!")
 }
 
 pub(crate) struct SslTunnel {
@@ -190,9 +198,7 @@ impl SslTunnel {
         trace!("Hello request: {:?}", req);
         self.send(req).await?;
 
-        let receiver = self.receiver.as_mut().unwrap();
-
-        let reply = receiver.next().await.context("Channel closed!")?;
+        let reply = receive_hello_reply(self.receiver.as_mut().unwrap()).await?;
 
         let reply = match reply {
             SlimPacketType::Control(expr) => {
@@ -489,5 +495,21 @@ impl Drop for SslTunnel {
         std::thread::scope(|s| {
             s.spawn(|| util::block_on(self.cleanup()));
         });
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[tokio::test(start_paused = true)]
+    async fn unanswered_hello_times_out() {
+        let (_sender, mut receiver) = mpsc::channel(1);
+
+        let result = tokio::time::timeout(HELLO_REPLY_TIMEOUT * 2, receive_hello_reply(&mut receiver))
+            .await
+            .expect("an unanswered hello must time out");
+
+        assert_eq!(result.unwrap_err().to_string(), tr!("error-hello-reply-timeout"));
     }
 }

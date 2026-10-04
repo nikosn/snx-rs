@@ -146,6 +146,7 @@ error-no-sender = Ei lähettäjää
 error-empty-ccc-session = Tyhjä CCC-istunto
 error-no-om-session = Vastauksessa ei ole istuntoa, VPN-palvelimen OM-lisenssit voivat olla lopussa
 error-identity-timeout = Aikakatkaisu odottaessa identiteettivastausta, onko kirjautumistyyppi oikea?
+error-hello-reply-timeout = Aikakatkaisu odotettaessa palvelimen tunnelin hello-vastausta
 error-invalid-transport-type = Virheellinen kuljetustyyppi
 error-invalid-ike-version = Virheellinen IKE-versio
 error-invalid-tls-version-max = Virheellinen TLS-enimmäisversio

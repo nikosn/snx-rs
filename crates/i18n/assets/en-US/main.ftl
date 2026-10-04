@@ -146,6 +146,7 @@ error-no-sender = No sender
 error-empty-ccc-session = Empty CCC session
 error-no-om-session = No session in reply, VPN server may be running out of OM licenses
 error-identity-timeout = Timeout while waiting for identity response, is the login type correct?
+error-hello-reply-timeout = Timeout while waiting for the tunnel hello reply from the server
 error-invalid-transport-type = Invalid transport type
 error-invalid-ike-version = Invalid IKE version
 error-invalid-tls-version-max = Invalid maximum TLS version

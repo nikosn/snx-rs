@@ -146,6 +146,7 @@ error-no-sender = Brak nadawcy
 error-empty-ccc-session = Pusta sesja CCC
 error-no-om-session = Brak sesji w odpowiedzi, na serwerze VPN mogły skończyć się licencje OM
 error-identity-timeout = Przekroczenie czasu oczekiwania na odpowiedź tożsamości, czy typ dostępu jest poprawny?
+error-hello-reply-timeout = Przekroczono limit czasu oczekiwania na odpowiedź hello tunelu z serwera
 error-invalid-transport-type = Nieprawidłowy typ transportu
 error-invalid-ike-version = Nieprawidłowa wersja IKE
 error-invalid-tls-version-max = Nieprawidłowa maksymalna wersja TLS

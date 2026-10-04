@@ -146,6 +146,7 @@ error-no-sender = Ingen avsändare
 error-empty-ccc-session = Tom CCC-session
 error-no-om-session = Ingen session i svaret, VPN-servern kan ha slut på OM-licenser
 error-identity-timeout = Timeout vid väntan på identitetssvar, är åtkomsttypen korrekt?
+error-hello-reply-timeout = Tidsgränsen överskreds i väntan på tunnelns hello-svar från servern
 error-invalid-transport-type = Ogiltig transporttyp
 error-invalid-ike-version = Ogiltig IKE-version
 error-invalid-tls-version-max = Ogiltig maximal TLS-version

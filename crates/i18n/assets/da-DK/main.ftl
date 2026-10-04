@@ -144,6 +144,7 @@ error-no-sender = Ingen afsender
 error-empty-ccc-session = Tom CCC-session
 error-no-om-session = Ingen session i svaret, VPN-serveren er muligvis løbet tør for OM-licenser
 error-identity-timeout = Timeout ved venten på identitetssvar, er adgangstypen korrekt?
+error-hello-reply-timeout = Timeout under venten på tunnelens hello-svar fra serveren
 error-probing-failed = Sondering mislykkedes, serveren er ikke tilgængelig via NATT-port!
 error-no-connector-for-challenge-code = Ingen connector til at sende challenge-koden til!
 error-invalid-transport-type = Ugyldig transporttype

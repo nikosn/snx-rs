@@ -146,6 +146,7 @@ error-no-sender = Pas d'expéditeur
 error-empty-ccc-session = Session CCC vide
 error-no-om-session = Aucune session dans la réponse, le serveur VPN manque peut-être de licences OM
 error-identity-timeout = Délai d'attente lors de l'attente de la réponse d'identité, le type de connexion est-il correct ?
+error-hello-reply-timeout = Délai dépassé en attendant la réponse hello du tunnel de la part du serveur
 error-invalid-transport-type = Type de transport invalide
 error-invalid-ike-version = Version IKE invalide
 error-invalid-tls-version-max = Version TLS maximale invalide

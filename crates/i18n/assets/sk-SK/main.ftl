@@ -146,6 +146,7 @@ error-no-sender = Žiadny odosielateľ
 error-empty-ccc-session = Prázdna CCC relácia
 error-no-om-session = V odpovedi nie je relácia, na VPN serveri sa možno minuli licencie OM
 error-identity-timeout = Časový limit pri čakaní na odpoveď identity, je typ prístupu správny?
+error-hello-reply-timeout = Vypršal časový limit pri čakaní na odpoveď servera na úvodnú správu tunela
 error-invalid-transport-type = Neplatný typ prenosu
 error-invalid-ike-version = Neplatná verzia IKE
 error-invalid-tls-version-max = Neplatná maximálna verzia TLS

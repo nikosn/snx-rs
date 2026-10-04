@@ -135,6 +135,7 @@ error-no-sender = No hay remitente
 error-empty-ccc-session = Sesión CCC vacía
 error-no-om-session = No hay sesión en la respuesta, puede que el servidor VPN se haya quedado sin licencias OM
 error-identity-timeout = Tiempo de espera al esperar la respuesta de identidad, ¿es correcto el tipo de inicio de sesión?
+error-hello-reply-timeout = Tiempo de espera agotado al esperar la respuesta de saludo del túnel desde el servidor
 error-not-challenge-state = No es un estado de desafío
 error-no-pkcs8 = No se ha proporcionado la ruta PEM PKCS8
 error-no-pkcs12 = No se ha proporcionado la ruta y contraseña PKCS12
