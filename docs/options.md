@@ -46,6 +46,7 @@
 | `allow-forwarding=true\|false`                       | Enable or disable packet forwarding for the tunnel interface. Default is false.                                                                          |
 | `tls-version-max=1.2\|1.3\|default`                  | Maximum TLS version offered to the gateway. Default is `1.2` to work around gateways that hang on TLS 1.3 ClientHellos. Use `default` to remove the cap. |
 | `client-logging-data=<path>`                         | A path to a json file which contains a custom client_logging_data structure (*). Used to impersonate the official Check Point client.                    |
+| `client-mode=<mode>`                                 | Client mode sent in the IPsec authentication data. Default is `secure_connect`; some gateways require `secure_remote` or `endpoint_security`.            |
 | `mfa-code=<code>`                                    | MFA code to use in non-interactive scripts, typically a TOTP code. Never written back on save; add/remove it manually in the config file.                |
 
 
